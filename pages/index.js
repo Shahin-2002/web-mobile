@@ -5,10 +5,7 @@ import SaleCountdown from "../components/module/SaleCountdown/saleCountdown.jsx"
 import Category from "@/components/module/Category/category.jsx";
 import ProductSpecial from "@/components/module/ProductSpecial/productSpecial.jsx";
 import BanerFooter from "@/components/module/BanerFooter/banerFooter.jsx";
-export default function Home({products , menus  , addToCart}) {
-
-  
-
+export default function Home({ products, menus, addToCart }) {
   return (
     <>
       <SearchInput />
@@ -22,11 +19,13 @@ export default function Home({products , menus  , addToCart}) {
 }
 
 export async function getServerSideProps() {
-  const resProducts = await fetch("/api/products");
+  const baseURL = "https://shahins-projects-3c5c7ad7.vercel.app";
+
+  const resProducts = await fetch(`${baseURL}/api/products`);
   const products = await resProducts.json();
 
-  const resMenus = await fetch("/api/menus");
+  const resMenus = await fetch(`${baseURL}/api/menus`);
   const menus = await resMenus.json();
-  return { props: { products , menus } }; // این props به کامپوننت میره
-}
 
+  return { props: { products, menus } };
+}
