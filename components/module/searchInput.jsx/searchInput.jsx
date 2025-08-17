@@ -8,7 +8,7 @@ function searchInput() {
     
         <SearchIcon style={{position: 'absolute', right:15 , bottom: 7 }} size={24} color='#DDDCDB'/>
         <input
-            className='w-full h-[40px] border-2 rounded-2xl px-4 mt-2 pr-13 custom-placeholder'
+            className='w-full h-[40px] border-2 rounded-2xl px-4 mt-3 pr-13 custom-placeholder'
             placeholder='جستجو'
             style={{ fontFamily: 'iranyekanLight' }}
         />
