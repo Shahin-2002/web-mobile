@@ -8,7 +8,7 @@ export default function handler(req, res) {
     {
       id: 2,
       name: "یکبار مصرف",
-      image: "/Images/k.png",
+      image: "/Images/K.png",
     },
     {
       id: 3,

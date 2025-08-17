@@ -33,7 +33,7 @@ function SaleCountdown({ endTime }) {
 
   return (
     <div
-      className="border rounded-2xl p-4 mt-7 mx-auto  w-[347px] flex justify-between items-center"
+      className="border rounded-2xl p-4 mt-7 mx-auto  w-[327px] flex justify-between items-center"
       style={{ backgroundColor: '#FDF2F6', borderColor: '#FFCACA' }}
     >
       {/* آیکون و متن سمت چپ */}

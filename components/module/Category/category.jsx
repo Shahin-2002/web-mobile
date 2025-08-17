@@ -4,7 +4,7 @@ import { Headphone } from '@/components/ui/iconsAndImagrs';
 function Category({data}) {
 
   return (
-    <div className="mt-7 w-full max-w-[347px] mx-auto flex flex-col items-center">
+    <div className="mt-7 w-full max-w-[327px] mx-auto flex flex-col items-center">
       {/* عنوان و توضیح */}
       <div className="flex items-center justify-between w-full">
         <p className="font-bold text-[#BA400B]" style={{ fontFamily: 'iranyekanExtrabold' }}>دسته‌بندی‌ها</p>

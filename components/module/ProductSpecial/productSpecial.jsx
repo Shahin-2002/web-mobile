@@ -9,7 +9,7 @@ import { PlaceHolder } from '@/components/ui/iconsAndImagrs';
 function ProductSpecial({ data , addToCart  }) {
   return (
     <>
-      <div className="mt-7 w-full max-w-[347px] mx-auto flex flex-col items-center">
+      <div className="mt-7 w-full max-w-[327px] mx-auto flex flex-col items-center">
         {/* عنوان و توضیح */}
         <div className="flex items-center justify-between w-full mb-3">
           <p

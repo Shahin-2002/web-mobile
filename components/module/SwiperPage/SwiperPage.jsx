@@ -9,7 +9,7 @@ import { Pagination } from 'swiper/modules';
 function SwiperPage() {
   return (
     <>
-      <div className="border-2 border-white shadow-2xl w-[347px] rounded-[12px] mx-auto mt-6 h-[160px]">
+      <div className="border-2 border-white shadow-2xl w-[327px] rounded-[12px] mx-auto mt-6 h-[160px]">
         <Swiper
           pagination={true}
           modules={[Pagination]}
