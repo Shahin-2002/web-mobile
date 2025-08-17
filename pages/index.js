@@ -5,10 +5,7 @@ import SaleCountdown from "../components/module/SaleCountdown/saleCountdown.jsx"
 import Category from "@/components/module/Category/category.jsx";
 import ProductSpecial from "@/components/module/ProductSpecial/productSpecial.jsx";
 import BanerFooter from "@/components/module/BanerFooter/banerFooter.jsx";
-export default function Home({products , menus  , addToCart}) {
-
-  
-
+export default function Home({ products, menus, addToCart }) {
   return (
     <>
       <SearchInput />
@@ -21,12 +18,16 @@ export default function Home({products , menus  , addToCart}) {
   );
 }
 
-export async function getServerSideProps() {
-  const resProducts = await fetch("http://localhost:3000/api/products");
+export async function getServerSideProps(context) {
+  const baseUrl = "http://" + context.req.headers.host;
+
+  const resProducts = await fetch(`${baseUrl}/api/products`);
   const products = await resProducts.json();
 
-  const resMenus = await fetch("http://localhost:3000/api/menus");
+  const resMenus = await fetch(`${baseUrl}/api/menus`);
   const menus = await resMenus.json();
-  return { props: { products , menus } }; // این props به کامپوننت میره
-}
 
+  return {
+    props: { products, menus },
+  };
+}
