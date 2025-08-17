@@ -9,6 +9,7 @@ export default function handler(req, res) {
       discount: 10,
       priceBeforeDiscount: 40000,
       priceAfterDiscount: 36000,
+      off: 10,
     },
     {
       id: 2,
@@ -18,6 +19,7 @@ export default function handler(req, res) {
       discount: 15,
       priceBeforeDiscount: 50000,
       priceAfterDiscount: 42500,
+      off: 15,
     },
     {
       id: 3,
@@ -27,6 +29,7 @@ export default function handler(req, res) {
       discount: 5,
       priceBeforeDiscount: 60000,
       priceAfterDiscount: 57000,
+      off: 5,
     },
     {
       id: 4,
@@ -36,6 +39,7 @@ export default function handler(req, res) {
       discount: 5,
       priceBeforeDiscount: 60000,
       priceAfterDiscount: 57000,
+      off: 5,
     },
   ];
 

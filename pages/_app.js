@@ -21,41 +21,56 @@ export default function App({ Component, pageProps }) {
 
   const addToCart = (product) => {
     setCart((prevCart) => {
-      // آیا محصول قبلا وجود داره؟
       const existing = prevCart.find((item) => item.id === product.id);
+
       if (existing) {
-        // اگه هست، فقط تعدادش رو زیاد کن
-        return prevCart.map((item) =>
-          item.id === product.id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        );
-      } else {
-        // اگه نیست، محصول جدید اضافه کن با تعداد 1
+        const newQuantity = existing.quantity + 1; // تعداد جدید
         Swal.fire({
           icon: "success",
-          title: "محصول به سبد خرید اضافه شد",
+          title: `${newQuantity} عدد ${product.name} در سبد خرید است`,
           showConfirmButton: false,
-          timer: 2000, // 2 ثانیه
+          timer: 2000,
           position: "top-end",
           toast: true,
         });
+
+        return prevCart.map((item) =>
+          item.id === product.id ? { ...item, quantity: newQuantity } : item
+        );
+      } else {
+        Swal.fire({
+          icon: "success",
+          title: `1 عدد ${product.name} به سبد خرید اضافه شد`,
+          showConfirmButton: false,
+          timer: 2000,
+          position: "top-end",
+          toast: true,
+        });
+
         return [...prevCart, { ...product, quantity: 1 }];
       }
     });
   };
 
   return (
-    <>
-      <Header
-        cart={cart}
-        setCart={setCart}
-        showCart={showCart}
-        setShowCart={setShowCart}
-      />
+    <div className="relative min-h-screen">
+      {/* هدر چسبیده به بالا */}
+      <div className="fixed top-0 left-0 w-full z-50 bg-white">
+        <Header
+          cart={cart}
+          setCart={setCart}
+          showCart={showCart}
+          setShowCart={setShowCart}
+        />
+      </div>
 
-      <Component {...pageProps} addToCart={addToCart} cart={cart} />
-      <Footer />
-    </>
+      <main className="pt-[70px] pb-[120px]">
+        <Component {...pageProps} addToCart={addToCart} cart={cart} />
+      </main>
+
+      <div className="fixed  bottom-0 left-0 w-full z-50 bg-white">
+        <Footer />
+      </div>
+    </div>
   );
 }

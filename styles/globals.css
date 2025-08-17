@@ -33,13 +33,15 @@ body{
   content: '';
   position: absolute;
   top: -16px; /* فاصله از بالای کانتینر */
-  left: 0;
-  width: 100%;
+  left: 50%;  /* شروع از وسط */
+  transform: translateX(-50%); /* وسط چین کردن */
+  width: 24px; /* عرض ثابت برای همه تب‌ها */
   height: 4px;
-  border-bottom-left-radius:20px ;
-  border-bottom-right-radius:20px ;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   background-color: #FF6A29;
 }
+
 
 .custom-placeholder::placeholder {
   color: #C0C0C0;

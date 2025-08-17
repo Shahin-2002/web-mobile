@@ -47,12 +47,12 @@ function Header({ cart, showCart, setShowCart, setCart }) {
               className="bg-white p-4 rounded-2xl w-80 max-h-[60vh] shadow-xl relative flex flex-col"
               onClick={(e) => e.stopPropagation()}
             >
-              <h2 className="font-bold text-lg mb-3 border-b pb-2">
+              <h2 className="font-bold text-lg mb-3 border-b pb-2" style={{ fontFamily: 'iranyekanExtrabold' }}>
                 🛒 سبد خرید
               </h2>
 
               {cart.length === 0 ? (
-                <p className="text-gray-500 text-center py-8">سبد خرید خالیه</p>
+                <p className="text-gray-500 text-center py-8" style={{ fontFamily: 'iranyekanLight' }}>سبد خرید خالیه</p>
               ) : (
                 <ul className="flex-1 overflow-y-auto space-y-3 pr-2">
                   {cart.map((item, i) => (
@@ -64,10 +64,11 @@ function Header({ cart, showCart, setShowCart, setCart }) {
                         <span
                           className="font-medium text-sm truncate"
                           title={item.name}
+                          style={{ fontFamily: 'iranyekanLight' }}
                         >
                           {item.name}
                         </span>
-                        <span className="text-[#BA400B] font-bold text-xs">
+                        <span className="text-[#BA400B] font-bold text-xs" style={{fontFamily: 'iranyekanExtrabold'}}>
                           {item.priceAfterDiscount.toLocaleString('fa-IR')}{' '}
                           تومان
                         </span>
@@ -88,8 +89,8 @@ function Header({ cart, showCart, setShowCart, setCart }) {
                           >
                             −
                           </button>
-                          <span className="text-sm font-medium">
-                            {item.quantity}
+                          <span className="text-sm font-medium" style={{fontFamily: 'iranyekanLight'}}>
+                            {item.quantity.toLocaleString('fa-IR')}
                           </span>
                           <button
                             className="w-6 h-6 flex items-center justify-center rounded-full border border-gray-300 hover:bg-gray-100 transition-colors"
@@ -126,8 +127,8 @@ function Header({ cart, showCart, setShowCart, setCart }) {
 
               {cart.length > 0 && (
                 <div className="mt-3 border-t pt-3 flex justify-between font-bold text-sm">
-                  <span>جمع کل:</span>
-                  <span>
+                  <span style={{ fontFamily: 'iranyekanLight' }}>جمع کل:</span>
+                  <span style={{ fontFamily: 'iranyekanLight' }}>
                     {cart
                       .reduce(
                         (sum, item) =>
@@ -141,7 +142,7 @@ function Header({ cart, showCart, setShowCart, setCart }) {
               )}
 
               <button
-                className="mt-4 w-full bg-[#BA400B] text-white py-2 rounded-xl hover:bg-[#a73600] transition-all text-sm"
+                className="mt-4 w-full bg-[#BA400B] text-white py-2 rounded-xl hover:bg-[#a73600] transition-all text-sm" style={{ fontFamily: 'iranyekanExtraBold' }}
                 onClick={() => setShowCart(false)}
               >
                 بستن

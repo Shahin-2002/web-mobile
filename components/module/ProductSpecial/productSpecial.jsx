@@ -79,7 +79,7 @@ function ProductSpecial({ data , addToCart  }) {
                               className="text-[12px] bg-[#C50F1F] text-white px-2 py-0.5 rounded-full"
                               style={{ fontFamily: 'iranyekanExtrabold' }}
                             >
-                              %10
+                              {item.off.toLocaleString('fa-IR')}%
                             </span>
                           </div>
                           <span
@@ -158,7 +158,7 @@ function ProductSpecial({ data , addToCart  }) {
                             className="text-[12px] bg-[#C50F1F] text-white px-2 py-0.5 rounded-full"
                             style={{ fontFamily: 'iranyekanExtrabold' }}
                           >
-                            %10
+                            {item.off.toLocaleString('fa-IR')}%
                           </span>
                         </div>
                         <span
