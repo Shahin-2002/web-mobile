@@ -20,7 +20,7 @@ function Header({ cart, showCart, setShowCart, setCart }) {
     }
   }, [showCart]);
   return (
-    <div className="w-full md:max-w-sm md:mx-auto p-4 flex items-center justify-between border-b-2 border-[#EAE8E8] px-5 relative">
+    <div className="w-full max-w-[500px] md:mx-auto p-4 flex items-center justify-between border-b-2 border-[#EAE8E8] px-5 relative">
       {/* سمت راست */}
       <div className="flex items-center gap-2">
         <ArrowForwardIcon size={28} color="#C0C0C0" />

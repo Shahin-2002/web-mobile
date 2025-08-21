@@ -17,7 +17,7 @@ function Footer() {
   ];
 
   return (
-    <div className="w-full md:max-w-sm md:mx-auto p-4 flex items-center justify-between border-t-2 border-[#F5F2EF] px-10">
+    <div className="w-full max-w-[500px] md:mx-auto p-4 flex items-center justify-between border-t-2 border-[#F5F2EF] px-10">
       <div className="flex flex-1 items-center justify-between">
         {tabs.map((tab) => {
           const Icon = tab.icon;

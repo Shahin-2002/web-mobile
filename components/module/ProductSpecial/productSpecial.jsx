@@ -39,8 +39,8 @@ function ProductSpecial({ data, addToCart }) {
               0: { slidesPerView: 1.5, spaceBetween: 12 },
               375: { slidesPerView: 2, spaceBetween: 12 },
               480: { slidesPerView: 2.5, spaceBetween: 14 },
-              768: { slidesPerView: 3, spaceBetween: 16 }, // فاصله بیشتر روی دسکتاپ کوچک
-              1024: { slidesPerView: 3, spaceBetween: 20 },
+              // 768: { slidesPerView: 3, spaceBetween: 10 },
+              // 1024: { slidesPerView: 3, spaceBetween: 1 },
             }}
             modules={[FreeMode, Pagination]}
             className="mySwiper"
@@ -120,8 +120,8 @@ function ProductSpecial({ data, addToCart }) {
               0: { slidesPerView: 1.5, spaceBetween: 12 },
               375: { slidesPerView: 2, spaceBetween: 12 },
               480: { slidesPerView: 2.5, spaceBetween: 14 },
-              768: { slidesPerView: 3, spaceBetween: 16 }, // فاصله بیشتر روی دسکتاپ کوچک
-              1024: { slidesPerView: 3, spaceBetween: 20 },
+              // 768: { slidesPerView: 3, spaceBetween: 16 },   
+              // 1024: { slidesPerView: 3, spaceBetween: 20 },
             }}
             modules={[FreeMode, Pagination]}
             className="mySwiper"
