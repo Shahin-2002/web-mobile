@@ -4,6 +4,9 @@ import { FiSearch } from "react-icons/fi";
 import { RiHome6Line } from "react-icons/ri";
 import { CgProfile } from "react-icons/cg";
 import { PiNotepadBold } from "react-icons/pi";
+import { FiTrash2 } from 'react-icons/fi';
+import { FiPlusCircle } from 'react-icons/fi';
+import { FiMinusCircle } from 'react-icons/fi';
 
 export const LogoHeader = '/Images/Frame-header.png'; // Adjust the path as necessary
 export const Fire = '/Images/g1.png'; // Adjust the path as necessary
@@ -17,8 +20,9 @@ export const Smart = '/Images/smart.png'
 
 
 
-
-
+export const TrashIcon = FiTrash2;
+export const PlusIcon = FiPlusCircle;
+export const MinusIcon = FiMinusCircle;
 export const ShoppingBasketIcon = FaShoppingBasket;
 export const ArrowForwardIcon = IoIosArrowForward;
 export const SearchIcon = FiSearch;

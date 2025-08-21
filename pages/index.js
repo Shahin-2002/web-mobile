@@ -7,14 +7,14 @@ import ProductSpecial from "@/components/module/ProductSpecial/productSpecial.js
 import BanerFooter from "@/components/module/BanerFooter/banerFooter.jsx";
 export default function Home({ products, menus, addToCart }) {
   return (
-    <>
+    <main className=" max-w-[500px] mx-auto">
       <SearchInput />
       <SwiperPage />
-      <SaleCountdown endTime="2025-08-20T23:59:59" />
+      <SaleCountdown endTime="2028-05-05T23:59:59" />
       <Category data={menus} />
       <ProductSpecial data={products} addToCart={addToCart} />
       <BanerFooter />
-    </>
+    </main>
   );
 }
 
